@@ -12,8 +12,9 @@ This study investigated the performance of different transferability strategies 
 `files/` contains CSV files with annotations for training and evaluation for the datasets used in our paper (same data as WeakDetector). Acompanying audio data is available on demand.
 
 `experiments/` contains a practical implementation of the transfer module:
-    - `arandomfinetune` contains code to systematically fine-tune with random sampling trained models to new data sources using different target dataset sizes
-    - `active_finetune` contains code to systematically fine-tune with active sampling trained models to new data sources using different target dataset sizes, giving 4 different options for active selection: standard uncertainty sampling, weighted uncertainty sampling, class-balanced uncertainty sampling, and class-balanced weighted uncertainty sampling
+
+    - `random_finetune/` contains code to systematically fine-tune with random sampling trained models to new data sources using different target dataset sizes
+    - `active_finetune/` contains code to systematically fine-tune with active sampling trained models to new data sources using different target dataset sizes, giving 4 different options for active selection: standard uncertainty sampling, weighted uncertainty sampling, class-balanced uncertainty sampling, and class-balanced weighted uncertainty sampling
 
 ## How to fine-tune your own models?
 
