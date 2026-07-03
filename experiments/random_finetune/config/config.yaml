@@ -1,0 +1,39 @@
+hydra:
+  run:
+    dir: ./run_outputs/val_source=${source},exp_type=${exp_type},min_snr=${min_snr}/n_retrain=${n_retrain},chrono=${chrono}/random_state=${random_state}/${hydra.job.override_dirname}/
+  sweep:
+    dir: ./run_outputs/
+    subdir: val_source=${source},exp_type=${exp_type},min_snr=${min_snr}/n_retrain=${n_retrain},chrono=${chrono}/random_state=${random_state}/${hydra.job.override_dirname}/
+  job:
+    config:
+      override_dirname:
+        exclude_keys:
+          - random_state
+          - source
+          - exp_type
+          - min_snr
+          - n_retrain
+          - chrono
+        
+
+
+
+min_snr: 0
+
+random_state: 0
+
+source: 'CS'
+
+exp_type: 'VAE'
+
+n_retrain: 200
+
+freeze_tcn: False
+
+chrono: False
+
+batch_size: 8
+
+n_epochs: 5
+
+lr: 0.001
